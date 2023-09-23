@@ -14,8 +14,8 @@ const Wrapper = styled.section`
       align-items:center;
       background:rgba(55,55,.3,.3);
       flex-direction:column;
+      box-shadow:5px 5px 5px rgba(25,25,25,.5);
       @media only screen and (min-width:600px){
-         box-shadow:5px 5px 5px rgba(25,25,25,.5);
          width:60%;
          border-radius:10px;
          transform:translateY(20px);
