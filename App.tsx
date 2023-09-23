@@ -119,9 +119,11 @@ const WatchWrapper = styled.div`
   return <Wrapper>
     <Title>an HoUr</Title>
     <ButtonWrapper>
-    <Button onClick={handleStart} bg="green" tpe="success">Start</Button>
+    <Button onClick={handleStart} bg="green" tpe="success">
+     Start
+    </Button>
     <Button onClick={handleStope} bg="red" tpe="danger">Stop</Button>
-    <Button onClick={handleReset} bg="indigo" tpe="danger">Reset</Button>
+    <Button onClick={handleReset} bg="indigo" tpe="info">Reset</Button>
     </ButtonWrapper>
     <WatchWrapper>
       <Watch>{minutesRef.current} :</Watch>
