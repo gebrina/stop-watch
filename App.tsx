@@ -81,7 +81,7 @@ const WatchWrapper = styled.div`
     const updateSeconds = ()=>{
       let seconds = Number(secondsRef.current);
       if(seconds<59){
-        secondsRef.current = String(seconds+1);
+        secondsRef.current = addZeroPrefix(seconds+1);
       }else{
         secondsRef.current='00';
         updateMinutes();
@@ -91,11 +91,15 @@ const WatchWrapper = styled.div`
      const updateMinutes = ()=>{
        const minutes = Number(minutesRef.current);
        if(minutes<59){
-          minutesRef.current = String(minutes+1)
+          minutesRef.current = addZeroPrefix(minutes+1);
        }else{
          minutesRef.current="00";
        }
      }
+ 
+    const addZeroPrefix =(value:number)=>{
+        return (value < 10 ? "0" + value : value).toString();
+    }
 
      const handleStart = ()=>{
       miliSecIntervalRef.current=setInterval(()=>{
